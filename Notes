@@ -4,8 +4,6 @@ TextChanged => Work avec TextBox
 SelectedIndexChanged => Works avec ComboBox or tous les lists mode controls
 
 
-
-
 ######################## ComboBox #################
 #Load Form:
 combobox.items.add("Debila");
@@ -15,4 +13,13 @@ combobox.items.add("Hassi  Khalifa");
  string[] Tab = new string[] { "Debila", "Hassi Khalifa","Megrane" };
 combobox.DataSource = Tab;
 
+#SelectedIndexChanged Event class :
+label1.Text = cbbVilles.SelectedItem.ToString();
+
+* SelectedItem,SelectedItems,SelectedIndex ....etc
+
 ######################## List Box ###################
+
+* listBox1.Items.Add(textBox1.Text); // Fill comboBox from TextBox .
+* listBox2.Items.Add(listBox1.SelectedItem.ToString()); // copy slected item from listbox1 to listbox2 avec Button
+
