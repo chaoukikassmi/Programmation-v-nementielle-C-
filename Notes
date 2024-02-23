@@ -9,9 +9,21 @@ SelectedIndexChanged => Works avec ComboBox or tous les lists mode controls
 combobox.items.add("Debila");
 combobox.items.add("Hassi  Khalifa");
 *************
-#Load Form:
+ Rempli un List Box by Matrice : 
+
  string[] Tab = new string[] { "Debila", "Hassi Khalifa","Megrane" };
 combobox.DataSource = Tab;
+
+************** Rempli un List Box By Matrice + For Loop  ********
+
+            string[] t = new string[3] { "Debila", "Hassi Khalifa", "Megrane" };
+            
+            for(int i= 0; i < t.Length; i++)
+            {
+                listBox2.Items.Add(t[i]);
+            }
+**********************************************************
+
 
 #SelectedIndexChanged Event class :
 label1.Text = cbbVilles.SelectedItem.ToString();
@@ -22,4 +34,6 @@ label1.Text = cbbVilles.SelectedItem.ToString();
 
 * listBox1.Items.Add(textBox1.Text); // Fill comboBox from TextBox .
 * listBox2.Items.Add(listBox1.SelectedItem.ToString()); // copy slected item from listbox1 to listbox2 avec Button
+* listBox1.Items.Remove(listBox1.SelectedItem); // remove selected item from listbox 
+// SEE : xxxx.items.Add() - xxxx.Items.Remove() || xxxx.SelectedItem - xxxx.SelectedIndex : (without going through Items )
 
