@@ -1,0 +1,18 @@
+############## Most Used Events avec Controls ######
+Enter,Activated,Leave,Load
+TextChanged => Work avec TextBox
+SelectedIndexChanged => Works avec ComboBox or tous les lists mode controls
+
+
+
+
+######################## ComboBox #################
+#Load Form:
+combobox.items.add("Debila");
+combobox.items.add("Hassi  Khalifa");
+*************
+#Load Form:
+ string[] Tab = new string[] { "Debila", "Hassi Khalifa","Megrane" };
+combobox.DataSource = Tab;
+
+######################## List Box ###################
