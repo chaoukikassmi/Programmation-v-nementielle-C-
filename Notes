@@ -138,5 +138,63 @@ OpenFileDialog => Event => FileOk
             }
         }
 
-******************** ListView **************************************
 
+************************** ListView ******************************
+Fill listview from textbox :
+Propretie => FullRowSelect = True
+Propretie => MultiSelect = False
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string[] t = new string[]{ textBox1.Text, textBox2.Text, textBox3.Text };
+            ListViewItem ls = new ListViewItem(t);
+
+            listView1.Items.Add(ls);
+        }
+
+Remove from List View Button remove : 
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (listView1.SelectedIndices.Count > 0) // if list view not null 
+            {
+            listView1.Items.RemoveAt(listView1.SelectedIndices[0]);
+            } else if (listView1.SelectedIndices.Count == 0)
+            {
+                MessageBox.Show("select item !");
+            }
+        }
+
+SelectedIndices[0] => remove selected row in listview 
+بما ان الليست فيو اصلا نستطيع تحديد سطر واحد فقط ، فالمرجع للحذف دائما المصفوفة الاولي 0 
+
+***Note : ListViewItem - xxxxxxx.SelectedIndices[] - xxxxx.SelectedIndices.Count - 
+
+
+************************ ListView = Recherche *************************************
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            bool trouve = false;
+            foreach(ListViewItem li in listView1.Items)
+            {
+                if (li.SubItems[0].Text == textBox1.Text)
+                { 
+                    trouve = true; 
+                }
+            }
+
+             if (trouve)
+                {
+                    MessageBox.Show(" Exsist !");
+                }
+             else
+                {
+                    MessageBox.Show("ne Exsist pas !");
+                }
+
+        }
+
+Note : li.SubItems[0] - ListViewItem li
+
+**********************************
